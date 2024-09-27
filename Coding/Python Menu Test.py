@@ -42,3 +42,6 @@ while True:
 
     if code in codesdict:
         codesdict[code][1]()
+
+    else:
+        print("Invalid code")
