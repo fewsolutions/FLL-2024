@@ -1,18 +1,16 @@
-from pybricks.hubs import PrimeHub
-from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
-from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
-from pybricks.robotics import DriveBase
-from pybricks.tools import wait, StopWatch
+from pybricks.parameters import Button, Color
+from pybricks.tools import wait
+from importlib import import_module
 
-#setup Hub and set the stop button to stop this code to the Bluetooth button
-hub = PrimeHub()
-hub.system.set_stop_button(Button.BLUETOOTH)
+from setup import setup
 
-#setup Colour Sensor
-sensor = ColorSensor(port=Port.A)
+
+hub, auxL, auxR, auxCS, base = setup()
+
+
 
 #import codes
-def code1():
+'''def code1():
     hub.light.on(Color.RED)
     wait(200)
     hub.light.off
@@ -25,12 +23,19 @@ def code2():
 def code3():
     hub.light.on(Color.GREEN)
     wait(200)
-    hub.light.off
+    hub.light.off'''
 
 #IMPORTANT
 #This is where each code is associated with a letter and colour for the colour sensor
 #Format: {"CodeLetter": [Color.COLOR, codereference]}
 codesdict = {"A": [Color.RED, code1], "B": [Color.BLUE, code2], "C": [Color.GREEN, code3]}
+
+#import codes from the codes dictionary instead of manually importing them
+for key, value in codesdict.items():
+    module_name = key
+    code_name = value[1]
+    module = import_module(module_name)
+    globals()[code_name] = getattr(module, code_name)
 
 selected = 0
 
@@ -53,7 +58,8 @@ def menu(codesdict):
             #Check if this colour has already been detected and if so don't do anything
             if attachsensed != lastsensor:
                 #Set selected to the code the colour detected is associated with
-                selected = (list({key: value[0] for key, value in codesdict.items()}.values()).index(attachsensed)) - 1
+                #Edit: added + 1 to the index to fix the index out of range error
+                selected = (list({key: value[0] for key, value in codesdict.items()}.values()).index(attachsensed)) + 1
                 #Remember what the last colour sensed was
                 lastsensor = attachsensed
                 print(f"Colour sensor used {attachsensed}")

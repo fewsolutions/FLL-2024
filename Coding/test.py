@@ -1,4 +1,4 @@
-import importlib
+from importlib import import_module
 
 codesdict = {
     "A": ["RED", "code1"], 
@@ -9,7 +9,7 @@ codesdict = {
 for key, value in codesdict.items():
     module_name = key
     code_name = value[1]
-    module = importlib.import_module(module_name)
+    module = import_module(module_name)
     globals()[code_name] = getattr(module, code_name)
 
 # Now you can call code1, code2, and code3 directly
