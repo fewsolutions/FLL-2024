@@ -4,7 +4,12 @@ from importlib import import_module
 
 from setup import setup
 
+#IMPORTANT
+#This is where each code is associated with a letter and colour for the colour sensor
+#Format: {"CodeLetter": [Color.COLOR, codereference]}
+codesdict = {"A": [Color.RED, code1], "B": [Color.BLUE, code2], "C": [Color.GREEN, code3]}
 
+#Setup the hub, motors, colour sensor and DriveBase
 hub, auxL, auxR, auxCS, base = setup()
 
 
@@ -25,10 +30,7 @@ def code3():
     wait(200)
     hub.light.off'''
 
-#IMPORTANT
-#This is where each code is associated with a letter and colour for the colour sensor
-#Format: {"CodeLetter": [Color.COLOR, codereference]}
-codesdict = {"A": [Color.RED, code1], "B": [Color.BLUE, code2], "C": [Color.GREEN, code3]}
+
 
 #import codes from the codes dictionary instead of manually importing them
 for key, value in codesdict.items():
