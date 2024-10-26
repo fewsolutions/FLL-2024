@@ -1,2 +1,2 @@
 def code3():
-    print("Code 3")
+    print("Printing the output from Code 3")
