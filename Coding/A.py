@@ -1,15 +1,27 @@
 from pybricks.parameters import Stop
 from pybricks.tools import wait
 
-def code1():
-    from codes import setup
-    hub, base, auxL, auxR, colorsensor = setup()
+#def code1():
+from codes import setup
+hub, b, auxL, auxR, colorsensor = setup()
 
-    #base.straight(200, then=Stop.HOLD)
-  
-    base.turn(360)
+b.use_gyro(True)
 
-    auxL.run_target(400, 90)
-    auxR.run_target(400, 180)
+#365 degrees for full turn if using grabber attachment
 
-    wait(5000)
+b.straight(100)
+b.turn(80)
+b.straight(300)
+b.turn(-20)
+b.straight(200)
+b.turn(30)
+b.straight(650)
+b.settings(turn_rate=50)
+b.turn(-40)
+b.settings(turn_rate=150)
+b.straight(20)
+b.turn(40)
+b.straight(250)
+b.straight(-100)
+b.turn(-90)
+b.straight(200)
