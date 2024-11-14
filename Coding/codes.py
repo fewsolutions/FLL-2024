@@ -41,7 +41,7 @@ except OSError as e:
 #Setup the DriveBase with the left motor as driveL, the right motor as driveR, the wheel diameter as 57.25mm and the axle track (width between the middle of the wheels) as 99.09mm
 base = DriveBase(left_motor=driveL, right_motor=driveR, wheel_diameter=57.25, axle_track=99.7)
 base.use_gyro(False)
-base.settings(straight_speed=750, straight_acceleration=500, turn_rate=150, turn_acceleration=100)
+base.settings(straight_speed=750, straight_acceleration=500, turn_rate=200, turn_acceleration=200)
 
 def setup():
     #Return the hub, left aux motor, right aux motor, colour sensor and DriveBase in that order so it can be referenced and used in the main code as well as other auxiliary codes to ensure every code uses the same parameters
