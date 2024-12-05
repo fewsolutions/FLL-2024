@@ -5,7 +5,7 @@ from pybricks.robotics import DriveBase
 
 
 #Setup the hub with the top side (with the USB) as the X axis and the front side (with the buttons) as the Y axis
-hub = PrimeHub(top_side=Axis.Y, front_side=-Axis.Y)
+hub = PrimeHub(top_side=Axis.Z, front_side=Axis.Y)
 hub.display.orientation(Side.RIGHT)
 
 #Set the stop button to the bluetooth button 

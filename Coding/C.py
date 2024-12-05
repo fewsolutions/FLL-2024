@@ -1,2 +1,10 @@
+from pybricks.parameters import Stop
+from pybricks.tools import wait
+
 def code3():
-    print("Printing the output from Code 3")
+    from codes import setup
+    hub, b, auxL, auxR, colorsensor = setup()
+    b.use_gyro(True)
+
+
+    auxL.run_target(500, 90)
