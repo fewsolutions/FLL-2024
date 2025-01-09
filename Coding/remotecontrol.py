@@ -28,6 +28,16 @@ while True:
             print("Mode 1")
             r.light.on(Color.GREEN)
 
+    if Button.LEFT in pressed:
+        print(f"{b.distance()} mm")
+
+    if Button.RIGHT in pressed:
+        print(f"{b.angle()} degrees")
+
+    if Button.LEFT in pressed and Button.RIGHT in pressed:
+        print("Reset")
+        b.reset()
+
     if mode == 1:
 
         if Button.LEFT_PLUS in pressed:
@@ -45,17 +55,24 @@ while True:
         else:
             b.stop()
 
-    '''if mode == 2:
+    if mode == 2:
 
         if Button.LEFT_PLUS in pressed:
-            
+            auxL.run(200)
 
         elif Button.LEFT_MINUS in pressed:
+            auxL.run(-200)
 
-        elif Button.RIGHT_PLUS in pressed:
+        else:
+            auxL.stop()
+
+        if Button.RIGHT_PLUS in pressed:
+            auxR.run(200)
         
         elif Button.RIGHT_MINUS in pressed:
+            auxR.run(-200)
 
-        else:'''
+        else:
+            auxR.stop()
 
     wait(100)
