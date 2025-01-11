@@ -4,11 +4,6 @@ from pybricks.pupdevices import Remote, Motor
 from pybricks.robotics import DriveBase
 from codes import setup
 
-'''driveL = Motor(Port.A, positive_direction=Direction.COUNTERCLOCKWISE)
-driveR = Motor(Port.E, positive_direction=Direction.CLOCKWISE)
-b = DriveBase(left_motor=driveL, right_motor=driveR, wheel_diameter=57.25, axle_track=99.7)
-b.use_gyro(True)
-'''
 hub, b, auxL, auxR, colorsensor = setup()
 
 r = Remote()
