@@ -18,11 +18,9 @@ while True:
     if Button.CENTER in pressed:
         if mode == 1:
             mode = 2
-            print("Mode 2")
             r.light.on(Color.ORANGE)
         else:
             mode = 1
-            print("Mode 1")
             r.light.on(Color.GREEN)
 
     if Button.LEFT in pressed and Button.RIGHT in pressed:
