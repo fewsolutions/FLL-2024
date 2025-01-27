@@ -3,12 +3,12 @@ from pybricks.tools import wait
 
 from codes import setup, reset, ready
 
-import A, B, C
+import BananaBoat, Krill, Coral, remotecontrol
 
 #IMPORTANT
 #This is where each code is associated with a letter and colour for the colour sensor
-#Format: {"CodeLetter": [Color.COLOR, codereference]}
-codeslist = [("A", Color.RED, A.code1), ("B", Color.BLUE, B.code2), ("C", Color.GREEN, C.code3)]
+#Format: [("LETTER", Color.COLOUR, Filename.codename)]
+codeslist = [("1", Color.RED, BananaBoat.code1), ("2", Color.BLUE, Krill.code2), ("3", Color.GREEN, Coral.code3), ("R", Color.WHITE, remotecontrol.remotecode)]
 
 #Setup the hub, motors, colour sensor and DriveBase
 hub, base, auxL, auxR, colorsensor = setup()

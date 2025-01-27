@@ -22,7 +22,12 @@ def code2():
     b.straight(350)
     b.turn(18)
     b.straight(277)
-    b.turn(-19)
+    b.turn(-17)
     b.straight(298)
-    b.turn(-59)
+    b.turn(-56)
     b.straight(650)
+    #Reset for next run
+    auxL.run_target(400, 0)
+    auxR.run_target(400, 0)
+
+#code2()
