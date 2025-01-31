@@ -1,3 +1,0 @@
-```
-Connection Error: Connection attempt failed.
-```

@@ -59,8 +59,9 @@ def reset():
 def ready():
     if colorsensor != None:
         colorsensor.lights.off()
-        hub.imu.reset_heading(0)
-        base.use_gyro(True)
-        hub.light.off()
-        hub.display.icon(Icon.UP)
+
+    hub.imu.reset_heading(0)
+    base.use_gyro(True)
+    hub.light.off()
+    hub.display.icon(Icon.UP)
     

@@ -8,8 +8,8 @@ def code2():
     b.use_gyro(True)
 
     b.turn(-45)
-    b.straight(560)
-    b.straight(-275)
+    b.straight(565)
+    b.straight(-280)
     b.turn(37)
     b.straight(390)
     b.turn(34)
@@ -25,9 +25,11 @@ def code2():
     b.turn(-17)
     b.straight(298)
     b.turn(-56)
-    b.straight(650)
+    b.straight(620)
+
     #Reset for next run
     auxL.run_target(400, 0)
+    
     auxR.run_target(400, 0)
 
-#code2()
+code2()

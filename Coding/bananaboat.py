@@ -12,5 +12,7 @@ def code1():
     b.turn(-25)
     b.straight(165)
     b.turn(19)
-    b.straight(171)
+    b.straight(175)
     b.straight(-345)
+
+code1()

@@ -2,9 +2,9 @@ from pybricks.parameters import Stop
 from pybricks.tools import wait, multitask, run_task
 
 
-# New Coral run
+# Reset
 from codes import setup
 hub, b, auxL, auxR, colorsensor = setup()
 
-
-b.settings(straight_speed=750)
+auxL.run_target(400, 0)
+auxR.run_target(400, 0)
