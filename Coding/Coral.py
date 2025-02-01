@@ -1,4 +1,3 @@
-from pybricks.parameters import Stop
 from pybricks.tools import wait
 
 def code3():
