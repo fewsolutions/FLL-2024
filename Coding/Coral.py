@@ -1,7 +1,8 @@
+from pybricks.parameters import Stop
 from pybricks.tools import wait
 
 def code3():
-    # Coral run
+    # Coral run (depricated)
     from codes import setup
     hub, b, auxL, auxR, colorsensor = setup()
     b.use_gyro(True)
@@ -10,13 +11,13 @@ def code3():
     auxR.run_angle(200, 171)
     b.turn(27)
     b.straight(763)
-    b.turn(-112.5)
-    auxR.run_angle(200, -74.5)
+    b.turn(-114)
+    auxR.run_angle(200, -78)
     b.straight(168)
-    auxR.run_angle(100, 56)
+    auxR.run_angle(100, 59.5)
     auxR.run_angle(100, -29)
     b.straight(-112)
-    b.turn(34)
+    b.turn(32)
     b.straight(200)
     b.straight(-288)
     b.turn(47)
