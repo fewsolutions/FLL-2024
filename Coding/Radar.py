@@ -9,18 +9,20 @@ def code5():
 
     auxL.run_angle(400, -200)
     b.turn(-17.8)
-    b.straight(840)
-    auxL.run_angle(400, 172)
-    b.straight(-240)
+    b.straight(860)
+    auxL.run_angle(400, 192)
+    b.straight(-245)
     auxL.run_angle(400, -68)
-    b.turn(74)
+    b.turn(80)
     auxL.run_angle(400, 100)
     b.straight(-100)
     b.turn(-82)
+    b.use_gyro(False)
     b.straight(-595)
+    b.turn(50)
 
     
     auxL.run_target(400, 0)
     auxR.run_target(400, 0)
 
-code5()
+#code5()
