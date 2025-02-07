@@ -9,10 +9,10 @@ def code1():
     b.use_gyro(True)
 
 
-    b.turn(-25)
-    b.straight(165)
-    b.turn(19)
-    b.straight(175)
+    b.turn(-24)
+    b.straight(135)
+    b.turn(19.5)
+    b.straight(215)
     b.straight(-345)
 
 code1()

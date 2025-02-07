@@ -9,15 +9,15 @@ def code3():
 
     auxR.run_angle(200, 171)
     b.turn(27)
-    b.straight(763)
+    b.straight(795)
     b.turn(-114)
-    b.straight(168)
+    b.straight(184)
     b.straight(-112)
-    b.turn(32)
-    b.straight(200)
+    b.turn(31.4)
+    b.straight(225)
 
-    b.straight(-133)
-    b.turn(100)
+    b.straight(-143)
+    b.turn(103)
     auxR.run_angle(400, -180)
     b.turn(44.5)
 
@@ -30,7 +30,7 @@ def code3():
     b.straight(232)
     auxR.run_angle(400, 138)
 
-    b.turn(59)
+    b.turn(56)
     b.straight(1040)
     b.turn(64)
     b.straight(531)
@@ -57,4 +57,4 @@ def code3():
     b.turn(63)
     b.straight(550)'''
  
-#code3()
+code3()
