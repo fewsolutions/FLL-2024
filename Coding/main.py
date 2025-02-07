@@ -12,8 +12,8 @@ codeslist = [
     ("1", Color.RED, BananaBoat.code1), 
     ("2", Color.BLUE, Krill.code2), 
     ("3", Color.GREEN, Shark.code3), 
-    ("4", Color.BROWN, Whale.code4), 
-    ("5", Color.CYAN, Radar.code5), 
+    ("4", Color.BROWN, Radar.code4), 
+    ("5", Color.CYAN, Whale.code5), 
     ("6", Color.MAGENTA, Submarine.code6), 
     ("7", Color.GRAY, Across.code7), 
     ("R", Color.WHITE, remotecontrol.remotecode)

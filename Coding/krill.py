@@ -9,22 +9,23 @@ def code2():
 
     b.turn(-45)
     b.straight(565)
-    b.straight(-280)
+    b.straight(-260)
     b.turn(37)
-    b.straight(390)
+    b.straight(375)
     b.turn(34)
     b.straight(125)
     b.settings(turn_rate=75)
     b.turn(-100)
     b.settings(turn_rate=200)
     b.straight(350)
-    b.turn(-25)
+    b.turn(-26)
     b.straight(350)
     b.turn(18)
     b.straight(277)
     b.turn(-17)
     b.straight(298)
     b.turn(-56)
+    b.use_gyro(False)
     b.straight(620)
 
     #Reset for next run
@@ -32,4 +33,4 @@ def code2():
     
     auxR.run_target(400, 0)
 
-code2()
+#code2()

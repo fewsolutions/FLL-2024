@@ -15,4 +15,4 @@ def code1():
     b.straight(215)
     b.straight(-345)
 
-code1()
+#code1()

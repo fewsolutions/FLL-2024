@@ -8,7 +8,7 @@ hub, b, auxL, auxR, colorsensor = setup()
 
 b.use_gyro(True)
 
-def code4():
+def code5():
     b.turn(-30)
     b.straight(682)
     b.turn(72)
@@ -23,4 +23,4 @@ def code4():
     b.use_gyro(False)
     b.turn(70)
 
-code4()
+#code5()
