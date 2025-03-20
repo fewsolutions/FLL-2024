@@ -9,18 +9,28 @@ import BananaBoat, Krill, Shark, Whale, Radar, Submarine, Across, remotecontrol
 #This is where each code is associated with a letter and colour for the colour sensor
 #Format: [("LETTER", Color.COLOUR, Filename.codename)]
 codeslist = [
-    ("1", Color.RED, BananaBoat.code1), 
-    ("2", Color.BLUE, Krill.code2), 
+    ("1", Color.YELLOW, BananaBoat.code1), 
+    ("2", Color.RED, Krill.code2), 
     ("3", Color.GREEN, Shark.code3), 
-    ("4", Color.BROWN, Radar.code4), 
+    ("4", Color.WHITE, Radar.code4), 
     ("5", Color.CYAN, Whale.code5), 
-    ("6", Color.MAGENTA, Submarine.code6), 
-    ("7", Color.GRAY, Across.code7), 
-    ("R", Color.WHITE, remotecontrol.remotecode)
+    ("6", Color.BLUE, Submarine.code6), 
+    ("R", Color.BLACK, remotecontrol.remotecode)
     ]
 
 #Setup the hub, motors, colour sensor and DriveBase
 hub, base, auxL, auxR, colorsensor = setup()
+
+#Setup Color sensor with custom colours
+Color.ORANGE = Color(h=5, s=81, v=84)
+Color.RED = Color(h=351, s=88, v=56)
+Color.YELLOW = Color(h=52, s=72, v=99)
+Color.GREEN = Color(h=159, s=57, v=61)
+Color.NONE = Color(h=0, s=0, v=0)
+Color.BLUE = Color(h=224, s=80, v=52)
+Color.WHITE = Color(h=0, s=0, v=100)
+colorsensor.detectable_colors([Color.ORANGE, Color.RED, Color.YELLOW, Color.GREEN, Color.BLUE, Color.WHITE, Color.NONE])
+
 
 selected = 0
 
@@ -45,6 +55,7 @@ def menu(codeslist):
 
             #Check what colour the colour sensor can see
             colorsensed = colorsensor.color(surface=True)
+            print(colorsensed)
 
             #Check if this colour is associated with any codes
             if colorsensed in [item[1] for item in codeslist]:
@@ -54,6 +65,7 @@ def menu(codeslist):
                     #Set selected to the code the colour detected is associated with
                     #Edit: added + 1 to the index to fix the index out of range error
                     selected = [item[1] for item in codeslist].index(colorsensed)
+  
                     #Remember what the last colour sensed was
                     lastsensor = colorsensed
                     #print(f"Colour sensor used {colorsensed}")
