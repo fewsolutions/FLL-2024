@@ -2,7 +2,7 @@ from pybricks.parameters import Stop, Button, Port, Direction, Color
 from pybricks.tools import wait
 from pybricks.pupdevices import Remote, Motor
 from pybricks.robotics import DriveBase
-from codes import setup
+from Codes import setup
 
 hub, b, auxL, auxR, colorsensor = setup()
 def remotecode():
@@ -84,4 +84,4 @@ def remotecode():
 
         wait(100)
 
-remotecode()
+#remotecode()

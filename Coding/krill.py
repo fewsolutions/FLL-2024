@@ -3,7 +3,7 @@ from pybricks.tools import wait
 
 def code2():
     # Krill run
-    from codes import setup
+    from Codes import setup
     hub, b, auxL, auxR, colorsensor = setup()
     b.use_gyro(True)
 

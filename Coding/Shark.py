@@ -3,7 +3,7 @@ from pybricks.tools import wait
 
 def code3():
     # Shark run
-    from codes import setup
+    from Codes import setup
     hub, b, auxL, auxR, colorsensor = setup()
     b.use_gyro(True)
 
@@ -19,13 +19,13 @@ def code3():
     b.straight(-143)
     b.turn(103)
     auxR.run_angle(400, -180)
-    b.turn(44.5)
+    b.turn(43)
 
 
     b.settings(straight_speed=150)
     b.straight(147)
     b.settings(straight_speed=750)
-    b.turn(-47)
+    b.turn(-45)
     auxR.run_angle(400, 70)
     b.straight(232)
     auxR.run_angle(400, 138)
@@ -38,23 +38,5 @@ def code3():
     auxL.run_target(400, 0)
     auxR.run_target(400, 0)
 
-    '''b.settings(straight_speed=100)
-    b.straight(140)
-    b.settings(straight_speed=750)
-    b.turn(-50)
-    auxR.run_angle(400, 100)
-    b.straight(237)
-    '''
     
-    '''b.straight(52)
-    auxR.run_angle(600, -170)
-    auxR.run_angle(400, 65)
-    b.turn(49)
-    b.straight(300)
-    auxR.run_angle(400, 210)
-    b.turn(60)
-    b.straight(993)
-    b.turn(63)
-    b.straight(550)'''
- 
 #code3()
