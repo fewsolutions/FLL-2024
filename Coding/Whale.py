@@ -26,4 +26,4 @@ def code5():
     b.straight(-730)
     b.turn(70)
 
-#code5()
+code5()

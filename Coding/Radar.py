@@ -29,4 +29,4 @@ def code4():
     auxL.run_target(400, 0)
     auxR.run_target(400, 0)
 
-#code4()
+code4()
