@@ -9,13 +9,13 @@ import BananaBoat, Krill, Shark, Whale, Radar, Submarine, RemoteControl
 #This is where each code is associated with a letter and colour for the colour sensor
 #Format: [("LETTER", Color.COLOUR, Filename.codename)]
 codeslist = [
-    ("1", Color.YELLOW, BananaBoat.code1), 
-    ("2", Color.RED, Krill.code2), 
-    ("3", Color.GREEN, Shark.code3), 
-    ("4", Color.WHITE, Radar.code4), 
-    ("5", Color.CYAN, Whale.code5), 
-    ("6", Color.BLUE, Submarine.code6), 
-    ("R", Color.BLACK, remotecontrol.remotecode)
+    ("B", Color.YELLOW, BananaBoat.code1), 
+    ("K", Color.RED, Krill.code2), 
+    ("S", Color.GREEN, Shark.code3), 
+    ("R", Color.WHITE, Radar.code4), 
+    ("W", Color.CYAN, Whale.code5), 
+    ("S", Color.BLUE, Submarine.code6), 
+    ("R", Color.BLACK, RemoteControl.remotecode)
     ]
 
 #Setup the hub, motors, colour sensor and DriveBase
@@ -29,7 +29,8 @@ Color.GREEN = Color(h=159, s=57, v=61)
 Color.NONE = Color(h=0, s=0, v=0)
 Color.BLUE = Color(h=224, s=80, v=52)
 Color.WHITE = Color(h=0, s=0, v=100)
-colorsensor.detectable_colors([Color.ORANGE, Color.RED, Color.YELLOW, Color.GREEN, Color.BLUE, Color.WHITE, Color.NONE])
+if colorsensor != None:
+    colorsensor.detectable_colors([Color.ORANGE, Color.RED, Color.YELLOW, Color.GREEN, Color.BLUE, Color.WHITE, Color.NONE])
 
 
 selected = 0
