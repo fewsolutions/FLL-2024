@@ -5,18 +5,7 @@ from Codes import setup, reset, ready
 
 import BananaBoat, Krill, Shark, Whale, Radar, Submarine, RemoteControl
 
-#IMPORTANT
-#This is where each code is associated with a letter and colour for the colour sensor
-#Format: [("LETTER", Color.COLOUR, Filename.codename)]
-codeslist = [
-    ("B", Color.YELLOW, BananaBoat.code1), 
-    ("K", Color.RED, Krill.code2), 
-    ("S", Color.GREEN, Shark.code3), 
-    ("R", Color.WHITE, Radar.code4), 
-    ("W", Color.CYAN, Whale.code5), 
-    ("S", Color.BLUE, Submarine.code6), 
-    ("R", Color.BLACK, RemoteControl.remotecode)
-    ]
+
 
 #Setup the hub, motors, colour sensor and DriveBase
 hub, base, auxL, auxR, colorsensor = setup()
@@ -32,6 +21,18 @@ Color.WHITE = Color(h=0, s=0, v=100)
 if colorsensor != None:
     colorsensor.detectable_colors([Color.ORANGE, Color.RED, Color.YELLOW, Color.GREEN, Color.BLUE, Color.WHITE, Color.NONE])
 
+#IMPORTANT
+#This is where each code is associated with a letter and colour for the colour sensor
+#Format: [("LETTER", Color.COLOUR, Filename.codename)]
+codeslist = [
+    ("B", Color.YELLOW, BananaBoat.code1), 
+    ("K", Color.RED, Krill.code2), 
+    ("S", Color.GREEN, Shark.code3), 
+    ("R", Color.WHITE, Radar.code4), 
+    ("W", Color.CYAN, Whale.code5), 
+    ("S", Color.BLUE, Submarine.code6), 
+    ("R", Color.BLACK, RemoteControl.remotecode)
+]
 
 selected = 0
 
@@ -58,8 +59,11 @@ def menu(codeslist):
             colorsensed = colorsensor.color(surface=True)
             print(colorsensed)
 
+            #print([item[1] for item in codeslist])
+
             #Check if this colour is associated with any codes
             if colorsensed in [item[1] for item in codeslist]:
+                print("True")
 
                 #Check if this colour has already been detected and if so don't do anything
                 if colorsensed != lastsensor:
@@ -71,6 +75,8 @@ def menu(codeslist):
                     lastsensor = colorsensed
                     #print(f"Colour sensor used {colorsensed}")
                     continue
+
+            
 
         else:
             wait(25)
