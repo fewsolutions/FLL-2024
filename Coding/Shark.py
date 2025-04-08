@@ -19,14 +19,14 @@ def code3():
     b.straight(-143)
     b.turn(103)
     auxR.run_angle(400, -180)
-    b.turn(43)
+    b.turn(41)
 
 
     b.settings(straight_speed=150)
     b.straight(147)
     b.settings(straight_speed=750)
-    b.turn(-45)
-    auxR.run_angle(400, 70)
+    b.turn(-44)
+    auxR.run_angle(400, 57)
     b.straight(232)
     auxR.run_angle(400, 138)
 

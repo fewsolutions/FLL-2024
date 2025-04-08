@@ -18,8 +18,9 @@ Color.GREEN = Color(h=159, s=57, v=61)
 Color.NONE = Color(h=0, s=0, v=0)
 Color.BLUE = Color(h=224, s=80, v=52)
 Color.WHITE = Color(h=0, s=0, v=100)
+Color.CYAN = Color(h=195, s=78, v=72)
 if colorsensor != None:
-    colorsensor.detectable_colors([Color.ORANGE, Color.RED, Color.YELLOW, Color.GREEN, Color.BLUE, Color.WHITE, Color.NONE])
+    colorsensor.detectable_colors([Color.ORANGE, Color.RED, Color.YELLOW, Color.GREEN, Color.BLUE, Color.WHITE, Color.CYAN, Color.NONE])
 
 #IMPORTANT
 #This is where each code is associated with a letter and colour for the colour sensor
@@ -27,7 +28,7 @@ if colorsensor != None:
 codeslist = [
     ("B", Color.YELLOW, BananaBoat.code1), 
     ("K", Color.RED, Krill.code2), 
-    ("S", Color.GREEN, Shark.code3), 
+    ("C", Color.GREEN, Shark.code3), 
     ("R", Color.WHITE, Radar.code4), 
     ("W", Color.CYAN, Whale.code5), 
     ("S", Color.BLUE, Submarine.code6), 
@@ -46,7 +47,7 @@ def menu(codeslist):
     #Main menu loop
     while True:
         
-        wait(150)
+        wait(25)
 
         #print(selected)
         #Display Code Character
@@ -57,13 +58,15 @@ def menu(codeslist):
 
             #Check what colour the colour sensor can see
             colorsensed = colorsensor.color(surface=True)
-            print(colorsensed)
+            #print(colorsensed)
+
+            #print([item[1] for item in codeslist])
 
             #print([item[1] for item in codeslist])
 
             #Check if this colour is associated with any codes
             if colorsensed in [item[1] for item in codeslist]:
-                print("True")
+                #print("True")
 
                 #Check if this colour has already been detected and if so don't do anything
                 if colorsensed != lastsensor:
@@ -89,13 +92,13 @@ def menu(codeslist):
                 selected = 0
             else:
                 selected = selected + 1
-
+            wait(100)
         elif Button.LEFT in pressed:
             if selected == 0:
                 selected = codecount
             else:
                 selected = selected - 1
-            
+            wait(100)
 
         elif Button.CENTER in pressed:
             return selected
